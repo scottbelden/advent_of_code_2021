@@ -34,11 +34,6 @@ class Board:
     def __repr__(self):
         return self.__str__()
 
-    # def bingo_value(self, nums_called):
-    #     for line in self.lines:
-    #         if line.issubset(nums_called):
-    #             return sum(set(self.grid) - nums_called)
-
     def bingo_score(self):
         nums_called = set()
         for index, number in enumerate(self.nums_to_call):
@@ -50,19 +45,6 @@ class Board:
 
 
 boards = [Board(board, numbers) for board in inputs[1:]]
-
-# answer_1 = None
-# nums_called = set()
-# for number in numbers:
-#     nums_called.add(number)
-
-#     for board in boards:
-#         if bingo_sum := board.bingo_value(nums_called):
-#             answer_1 = bingo_sum * number
-#             break
-
-#     if answer_1:
-#         break
 
 results = [board.bingo_score() for board in boards]
 results.sort(key=lambda x: x[1])
