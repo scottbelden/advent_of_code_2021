@@ -10,6 +10,7 @@ import day_10
 import day_11
 import day_13
 import day_14
+import day_16
 
 
 def test_day_01():
@@ -69,3 +70,8 @@ def test_day_13():
 
 def test_day_14():
     assert day_14.ANSWER1 == 3906
+
+
+def test_day_16():
+    assert day_16.ANSWER1 == 951
+    assert day_16.ANSWER2 == 902198718880
