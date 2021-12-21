@@ -21,6 +21,11 @@ def get_input_as_int(filename):
         return [int(line.strip()) for line in fp]
 
 
+def get_input_as_str(filename):
+    with open(filename) as fp:
+        return fp.read().strip()
+
+
 def get_line_separated_inputs(filename):
     chunks = []
     chunk = []
